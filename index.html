@@ -29,9 +29,13 @@
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
             var startYear, endYear, startMonth, endMonth, startD, endD, cd, cm, cy, temp = 0,no_of_people;
-
+            var today=new Date();
            
-
+            if(today<Date.parse(endDate))
+            {
+                alert("To Date must be less than or equal to today date");
+                return false;
+            }
             if ((Date.parse(startDate) >= Date.parse(endDate))) {
                 alert("End date should be greater than Start date");
                 document.getElementById("EndDate").value = "";
@@ -228,6 +232,7 @@
             </div>
         </div>
     </nav>
+    <div class=row><marquee>We only calculate for 1 month</marquee></div>
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
@@ -237,8 +242,8 @@
                 <div class="panel-body" >
                     <form action="#" onsubmit="return checkDate()">
                     FROM DATE <input type="date" class="form-control" id="fromdate" required />
-                    TO DATE <input type="date" class="form-control" id="todate" required />
-                    PARTICIPANT'S NAME<input type="text" class="form-control" placeholder="participant name seperated by comma for eg: Harry,Flash," id="participantsName" required/><br>
+                    TO DATE <input type="date" class="form-control" id="todate" required  onblur="checkdate()"/>
+                    PARTICIPANT'S NAME<input type="text" class="form-control" placeholder="Write comma after each name eg: Harry,Flash," id="participantsName" required/><br>
                     <input type="submit"  class="btn btn-primary"  value="Show Expenditure table" />                        </form>
                 </div>
             </div>
