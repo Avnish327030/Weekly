@@ -98,7 +98,7 @@
 
                 
                 
-                
+                return false;
             }
 
             if (start == 1) {
@@ -137,7 +137,7 @@
                     expenditureTable = expenditureTable + '<tr><td>' + i + '</td><td>' + startDate.getDate() + '/' + (Number(startDate.getMonth())+Number(1)) + '/' + startDate.getFullYear() + '</td > <td>' + weekday[startDate.getDay()] + '</td>';
                     startDate.setDate(startDate.getDate() + 1);
                     for (var j = 1; j <= no_of_people; j++) {
-                        expenditureTable = expenditureTable + '<td><input type="number" style="padding:5px;width:80px;" class="'+ names[j - 1]+'"/></td>';
+                        expenditureTable = expenditureTable + '<td><input type="number" placeholder="AMOUNT" style="padding:5px;width:80px;" class="'+ names[j - 1]+'"/></td>';
                     }
                     expenditureTable = expenditureTable + '</tr>';
                 }
