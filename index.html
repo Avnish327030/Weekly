@@ -1,13 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled</title>
-    <link rel="stylesheet" type="text/css" href="https://avnyadav.pythonanywhere.com/static/style.css">
-    <link rel="stylesheet" type="text/css" href="https://avnyadav.pythonanywhere.com/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://avnyadav.pythonanywhere.com/static/assets/css/styles.css"/>
+    <title>Weekly Expenditure Distribution</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<meta name="google-site-verification" content="BAyOmsO1CdqP6NYY8cbaPDEcEZHK9Dg6h5fRk4h3d5E" />
+<!-- Latest compiled and minified JavaScript -->
     <script>
        
            
@@ -29,13 +33,9 @@
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
             var startYear, endYear, startMonth, endMonth, startD, endD, cd, cm, cy, temp = 0,no_of_people;
-            var today=new Date();
+
            
-            if(today<Date.parse(endDate))
-            {
-                alert("To Date must be less than or equal to today date");
-                return false;
-            }
+
             if ((Date.parse(startDate) >= Date.parse(endDate))) {
                 alert("End date should be greater than Start date");
                 document.getElementById("EndDate").value = "";
@@ -226,13 +226,12 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="active" role="presentation"><a href="index.html">Home </a></li>
-                    <li role="presentation"><a href="#">About us</a></li>
-                    <li role="presentation"><a href="#">Contact us</a></li>
+                    <li role="presentation"><a href="Aboutus.html">About us</a></li>
+                    <li role="presentation"><a href="Contactus.html">Contact us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class=row><marquee>We only calculate for 1 month</marquee></div>
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
@@ -242,8 +241,8 @@
                 <div class="panel-body" >
                     <form action="#" onsubmit="return checkDate()">
                     FROM DATE <input type="date" class="form-control" id="fromdate" required />
-                    TO DATE <input type="date" class="form-control" id="todate" required  onblur="return checkDate()"/>
-                    PARTICIPANT'S NAME<input type="text" class="form-control" placeholder="Write comma after each name eg: Harry,Flash," id="participantsName" required/><br>
+                    TO DATE <input type="date" class="form-control" id="todate" required />
+                    PARTICIPANT'S NAME<input type="text" class="form-control" placeholder="participant name seperated by comma for eg: Harry,Flash," id="participantsName" required/><br>
                     <input type="submit"  class="btn btn-primary"  value="Show Expenditure table" />                        </form>
                 </div>
             </div>
@@ -280,8 +279,9 @@
 
         </div>
         </div>
-    <script src="https://avnyadav.pythonanywhere.com/assets/js/jquery.min.js"></script>
-    <script src="https://avnyadav.pythonanywhere.com/assets/bootstrap/js/bootstrap.min.js"></script>
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
